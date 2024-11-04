@@ -1,0 +1,90 @@
+site_name: Odin
+site_description: Odin Documentation
+strict: true
+site_url: https://valkyrie-sh.github.io/odin/
+
+repo_name: valkyrie-sh/odin
+repo_url: https://github.com/valkyrie-sh/odin
+edit_uri: edit/main/docs/
+
+theme: 
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: black
+      accent: red
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: black
+      accent: lime
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: en
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.expand
+    - navigation.indexes
+    - navigation.path
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+nav:
+  - Odin:
+      - Introducing Odin: odin/index.md
+      - Nix: odin/nix.md
+      - Platforms: odin/platforms.md
+  - Blog:
+      - blog/index.md
+
+markdown_extensions: 
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins: 
+  - privacy
+  - search
+  - blog
+  - minify:
+      minify_html: true
+
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/valkyrie-sh/odin
+
+copyright: >
+  Copyright &copy; 2024 Odin
