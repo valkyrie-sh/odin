@@ -59,10 +59,19 @@ nav:
       - Platforms: odin/platforms.md
   - Blog:
       - blog/index.md
+  - Deployment: 
+      - deployment/index.md
+      - deployment/methods/standalone.md
+      - deployment/methods/container.md
+      - deployment/methods/cloud-provider.md
+
+# exclude_docs: |
+#   deployment/methods/*.md
 
 markdown_extensions: 
   - attr_list
   - md_in_html
+  - admonition
   - toc:
       permalink: true
   - pymdownx.emoji:
